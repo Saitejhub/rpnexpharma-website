@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact RP Nexpharma for pharmaceutical product information and business enquiries.">
+  <title>Contact Us | RP Nexpharma</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="manufacturing-quality.html">Manufacturing &amp; Quality</a>
+      <a class="nav-cta active" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact Us</div>
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h1>Let's start a <span>conversation.</span></h1>
+      <p>Contact RP Nexpharma for company information, product enquiries and business-related questions.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+      <div>
+        <span class="eyebrow">CONTACT INFORMATION</span>
+        <h2 class="section-title">Connect with <span>our team.</span></h2>
+        <p class="section-text">
+          We welcome relevant enquiries from businesses and other
+          organisations interested in learning more about RP Nexpharma.
+          Please provide your contact details and a brief description
+          of your enquiry.
+        </p>
+
+        <div class="contact-item">
+          <div class="card-icon">@</div>
+          <div>
+            <h3>Email Address</h3>
+            <p>Replace with your verified company email.</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="card-icon">+</div>
+          <div>
+            <h3>Telephone</h3>
+            <p>Replace with your verified business phone number.</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="card-icon">⌖</div>
+          <div>
+            <h3>Company Address</h3>
+            <p>Add the verified registered or business address.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:30px">
+          <h3>Product and business enquiries</h3>
+          <p>For product enquiries, include the relevant product name or topic if known. Please do not send confidential medical or personal information through this general form.</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <h2>Send an enquiry</h2>
+        <p>Complete the fields below to prepare your email.</p>
+
+        <label for="name">Full name *</label>
+        <input id="name" name="name" type="text" autocomplete="name"
+               placeholder="Enter your name" required>
+
+        <label for="email">Business email *</label>
+        <input id="email" name="email" type="email" autocomplete="email"
+               placeholder="you@company.com" required>
+
+        <label for="company">Company / Organisation</label>
+        <input id="company" name="company" type="text"
+               autocomplete="organization" placeholder="Company name">
+
+        <label for="subject">Enquiry type *</label>
+        <select id="subject" name="subject" required>
+          <option value="">Select an option</option>
+          <option value="Product enquiry">Product enquiry</option>
+          <option value="Business enquiry">Business enquiry</option>
+          <option value="General company information">General company information</option>
+          <option value="Other enquiry">Other enquiry</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5"
+                  placeholder="Please describe your enquiry" required></textarea>
+
+        <button class="btn btn-primary" type="submit">Prepare Email Enquiry →</button>
+
+        <p id="formNote" class="note">
+          This form opens your email application. It does not send or store
+          form submissions directly on this website.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container callout">
+      <div>
+        <span class="eyebrow">RP NEXPHARMA</span>
+        <h2>Thank you for your interest.</h2>
+        <p>We look forward to learning more about your enquiry.</p>
+      </div>
+      <a href="about.html" class="btn btn-light">About Our Company →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand"><a href="index.html"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a><p>Focused on pharmaceutical tablet manufacturing and a quality-conscious approach to our work.</p></div>
+    <div class="footer-links"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="manufacturing-quality.html">Manufacturing &amp; Quality</a></div>
+    <div class="footer-links"><h3>Contact</h3><a href="contact.html">Contact Us</a><p>RP Nexpharma</p></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© <span id="currentYear"></span> RP Nexpharma. All rights reserved.</p><a href="index.html">Back to Home ↑</a></div></div>
+</footer>
+</body>
+</html>
