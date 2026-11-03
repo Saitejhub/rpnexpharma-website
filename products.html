@@ -4,132 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore RP Nexpharma's pharmaceutical tablet manufacturing focus and product portfolio information.">
   <title>Products | RP Nexpharma</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="site-header">
-  <div class="container navbar">
-    <a href="index.html" class="brand"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="main-nav">
       <a href="index.html">Home</a><a href="about.html">About Us</a>
       <a class="active" href="products.html">Products</a>
-      <a href="manufacturing-quality.html">Manufacturing &amp; Quality</a>
-      <a class="nav-cta" href="contact.html">Contact Us</a>
+      <a href="manufacturing-quality.html">Manufacturing & Quality</a>
+      <a href="group-companies.html">Our Group</a>
+      <a class="nav-contact" href="contact.html">Contact Us</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="page-banner">
+  <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Products</div>
-      <span class="eyebrow">OUR PRODUCT PORTFOLIO</span>
-      <h1>Pharmaceutical <span>Tablet Medicines</span></h1>
-      <p>Learn about RP Nexpharma's focus on tablet dosage forms and request information about our confirmed products through the company.</p>
+      <span class="eyebrow light">OUR PRODUCT FOCUS</span>
+      <h1>Developing our pharmaceutical product portfolio</h1>
+      <p>Our current in-house manufacturing focus is on tablet dosage forms.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container two-column">
-      <div>
-        <span class="eyebrow">PRODUCT OVERVIEW</span>
-        <h2 class="section-title">A portfolio centred on <span>tablet dosage forms.</span></h2>
-        <p class="section-text">
-          RP Nexpharma's stated manufacturing focus is its own
-          pharmaceutical medicines in tablet dosage form. A detailed
-          public product catalogue can include individual medicine names,
-          strengths, dosage forms, pack sizes and other approved product
-          information once the current portfolio has been verified.
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">DOSAGE FORM</span>
+        <h2>Tablet manufacturing</h2>
+        <p>
+          RP Nexpharma is developing its own medicine manufacturing activities,
+          with tablets as its current in-house dosage-form focus.
         </p>
-        <p class="section-text">
-          We aim to present product information clearly and responsibly.
-          All medicine details should match the applicable product
-          documentation and authorisations.
-        </p>
-        <a class="btn btn-primary" href="contact.html">Enquire About Products</a>
       </div>
-      <div class="visual-box">
-        <div class="image-placeholder">
-          <div class="plus">Rx</div>
-          <h3>Tablet Formulations</h3>
-          <p>RP Nexpharma</p>
+
+      <div class="product-feature">
+        <div class="product-visual">
+          <img src="assets/images/pharmaceutical-workers-collage.png"
+               alt="Pharmaceutical manufacturing professionals">
+        </div>
+        <div class="product-copy">
+          <span class="eyebrow">CURRENT MANUFACTURING FOCUS</span>
+          <h2>Tablets</h2>
+          <p>
+            Tablet dosage forms are the current focus of our in-house
+            manufacturing direction. We aim to develop the processes and
+            capabilities needed to support responsible pharmaceutical production.
+          </p>
+          <p>
+            Product-specific information, including composition, strength,
+            pack size and availability, will be published once formally
+            confirmed and approved for communication.
+          </p>
+          <a class="btn btn-primary" href="contact.html">Product Enquiries</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">PORTFOLIO INFORMATION</span>
-        <h2 class="section-title">Explore our <span>product categories</span></h2>
-        <p>The cards below are portfolio sections, not claims that particular medicines or therapeutic categories are currently manufactured.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-icon">01</div>
-          <h3>Tablet Formulations</h3>
-          <p>Information about confirmed tablet products, including the product name, strength, presentation and other verified details.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">02</div>
-          <h3>Product Specifications</h3>
-          <p>Relevant product specifications and supporting information can be added when approved for publication by the company.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">03</div>
-          <h3>Product Enquiries</h3>
-          <p>Business partners can contact RP Nexpharma to request current product information and discuss relevant enquiries.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">PRODUCT INFORMATION</span>
-        <h2 class="section-title">What a detailed product page can <span>include</span></h2>
-        <p>Each verified product can eventually have its own page or product card containing the relevant information.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card"><div class="card-icon">A</div><h3>Product Name</h3><p>The verified generic or product name, presented according to the company's approved materials.</p></article>
-        <article class="card"><div class="card-icon">B</div><h3>Strength &amp; Form</h3><p>The confirmed strength, tablet type and relevant dosage-form details.</p></article>
-        <article class="card"><div class="card-icon">C</div><h3>Packaging Details</h3><p>Approved pack sizes, product presentation and other appropriate commercial details.</p></article>
-      </div>
-
-      <p class="note">
-        Important: Do not publish unverified indications, efficacy claims,
-        certifications or medicine details. Prescription status and
-        regulatory requirements should be reflected accurately for each
-        product and market.
-      </p>
-    </div>
-  </section>
-
-  <section class="section soft-section">
-    <div class="container callout">
-      <div><span class="eyebrow">PRODUCT ENQUIRIES</span><h2>Need more information about our portfolio?</h2><p>Contact RP Nexpharma for product and business-related enquiries.</p></div>
-      <a href="contact.html" class="btn btn-light">Contact Us →</a>
+  <section class="section soft-bg">
+    <div class="container closing-cta">
+      <span class="eyebrow">BUSINESS ENQUIRIES</span>
+      <h2>Discuss product and partnership opportunities</h2>
+      <p>Contact RP Nexpharma for further information about its manufacturing focus.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div class="footer-brand"><a href="index.html"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a><p>Focused on pharmaceutical tablet manufacturing and a quality-conscious approach to our work.</p></div>
-    <div class="footer-links"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="manufacturing-quality.html">Manufacturing &amp; Quality</a></div>
-    <div class="footer-links"><h3>Contact</h3><a href="contact.html">Contact Us</a><p>RP Nexpharma</p></div>
+    <div><img class="footer-logo" src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma"><p>Focused on pharmaceutical manufacturing.</p></div>
+    <div><h4>Explore</h4><a href="about.html">About Us</a><a href="manufacturing-quality.html">Manufacturing & Quality</a></div>
+    <div><h4>Connect</h4><a href="group-companies.html">Our Group</a><a href="contact.html">Contact Us</a></div>
   </div>
-  <div class="footer-bottom"><div class="container"><p>© <span id="currentYear"></span> RP Nexpharma. All rights reserved.</p><a href="index.html">Back to Home ↑</a></div></div>
+  <div class="footer-bottom"><div class="container">© <span class="year"></span> RP Nexpharma. All rights reserved.</div></div>
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>
