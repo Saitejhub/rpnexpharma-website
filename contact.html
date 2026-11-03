@@ -4,135 +4,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact RP Nexpharma for pharmaceutical product information and business enquiries.">
   <title>Contact Us | RP Nexpharma</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="site-header">
-  <div class="container navbar">
-    <a href="index.html" class="brand"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="main-nav">
       <a href="index.html">Home</a><a href="about.html">About Us</a>
       <a href="products.html">Products</a>
-      <a href="manufacturing-quality.html">Manufacturing &amp; Quality</a>
-      <a class="nav-cta active" href="contact.html">Contact Us</a>
+      <a href="manufacturing-quality.html">Manufacturing & Quality</a>
+      <a href="group-companies.html">Our Group</a>
+      <a class="nav-contact active" href="contact.html">Contact Us</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="page-banner">
+  <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Contact Us</div>
-      <span class="eyebrow">GET IN TOUCH</span>
-      <h1>Let's start a <span>conversation.</span></h1>
-      <p>Contact RP Nexpharma for company information, product enquiries and business-related questions.</p>
+      <span class="eyebrow light">CONTACT RP NEXPHARMA</span>
+      <h1>Let's start a conversation</h1>
+      <p>For business enquiries, manufacturing discussions and potential partnerships, get in touch.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container contact-layout">
       <div>
-        <span class="eyebrow">CONTACT INFORMATION</span>
-        <h2 class="section-title">Connect with <span>our team.</span></h2>
-        <p class="section-text">
-          We welcome relevant enquiries from businesses and other
-          organisations interested in learning more about RP Nexpharma.
-          Please provide your contact details and a brief description
-          of your enquiry.
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2>We welcome your enquiry</h2>
+        <p>
+          Contact RP Nexpharma to discuss our pharmaceutical manufacturing
+          focus, business opportunities or potential collaborations.
         </p>
-
-        <div class="contact-item">
-          <div class="card-icon">@</div>
-          <div>
-            <h3>Email Address</h3>
-            <p>Replace with your verified company email.</p>
-          </div>
+        <div class="contact-detail">
+          <h3>Business enquiries</h3>
+          <p>Please use the enquiry form to send your message to our team.</p>
         </div>
-
-        <div class="contact-item">
-          <div class="card-icon">+</div>
-          <div>
-            <h3>Telephone</h3>
-            <p>Replace with your verified business phone number.</p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="card-icon">⌖</div>
-          <div>
-            <h3>Company Address</h3>
-            <p>Add the verified registered or business address.</p>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:30px">
-          <h3>Product and business enquiries</h3>
-          <p>For product enquiries, include the relevant product name or topic if known. Please do not send confidential medical or personal information through this general form.</p>
+        <div class="contact-detail">
+          <h3>Group company</h3>
+          <p>RP Nexpharma is a sister concern of RP Enterprises and VV Technologies.</p>
+          <a class="text-link" href="https://vvtechnologiesinc.com/" target="_blank" rel="noopener">VV Technologies website →</a>
         </div>
       </div>
 
       <form class="contact-form" id="contactForm">
-        <h2>Send an enquiry</h2>
-        <p>Complete the fields below to prepare your email.</p>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required>
 
-        <label for="name">Full name *</label>
-        <input id="name" name="name" type="text" autocomplete="name"
-               placeholder="Enter your name" required>
+        <label for="email">Business email</label>
+        <input id="email" name="email" type="email" placeholder="name@company.com" required>
 
-        <label for="email">Business email *</label>
-        <input id="email" name="email" type="email" autocomplete="email"
-               placeholder="you@company.com" required>
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" placeholder="Company name">
 
-        <label for="company">Company / Organisation</label>
-        <input id="company" name="company" type="text"
-               autocomplete="organization" placeholder="Company name">
-
-        <label for="subject">Enquiry type *</label>
-        <select id="subject" name="subject" required>
-          <option value="">Select an option</option>
-          <option value="Product enquiry">Product enquiry</option>
-          <option value="Business enquiry">Business enquiry</option>
-          <option value="General company information">General company information</option>
-          <option value="Other enquiry">Other enquiry</option>
+        <label for="subject">Enquiry type</label>
+        <select id="subject" name="subject">
+          <option>General business enquiry</option>
+          <option>Product enquiry</option>
+          <option>Manufacturing enquiry</option>
+          <option>Partnership opportunity</option>
+          <option>Other</option>
         </select>
 
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="5"
-                  placeholder="Please describe your enquiry" required></textarea>
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
 
-        <button class="btn btn-primary" type="submit">Prepare Email Enquiry →</button>
-
-        <p id="formNote" class="note">
-          This form opens your email application. It does not send or store
-          form submissions directly on this website.
+        <p class="form-note">
+          By submitting, your email application will open with your enquiry details.
+          Please review the message before sending.
         </p>
+        <button class="btn btn-primary" type="submit">Prepare Enquiry</button>
       </form>
-    </div>
-  </section>
-
-  <section class="section soft-section">
-    <div class="container callout">
-      <div>
-        <span class="eyebrow">RP NEXPHARMA</span>
-        <h2>Thank you for your interest.</h2>
-        <p>We look forward to learning more about your enquiry.</p>
-      </div>
-      <a href="about.html" class="btn btn-light">About Our Company →</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div class="footer-brand"><a href="index.html"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a><p>Focused on pharmaceutical tablet manufacturing and a quality-conscious approach to our work.</p></div>
-    <div class="footer-links"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="manufacturing-quality.html">Manufacturing &amp; Quality</a></div>
-    <div class="footer-links"><h3>Contact</h3><a href="contact.html">Contact Us</a><p>RP Nexpharma</p></div>
+    <div><img class="footer-logo" src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma"><p>Pharmaceutical manufacturing with an international outlook.</p></div>
+    <div><h4>Explore</h4><a href="about.html">About Us</a><a href="products.html">Products</a></div>
+    <div><h4>Connect</h4><a href="group-companies.html">Our Group</a><a href="https://vvtechnologiesinc.com/" target="_blank" rel="noopener">VV Technologies</a></div>
   </div>
-  <div class="footer-bottom"><div class="container"><p>© <span id="currentYear"></span> RP Nexpharma. All rights reserved.</p><a href="index.html">Back to Home ↑</a></div></div>
+  <div class="footer-bottom"><div class="container">© <span class="year"></span> RP Nexpharma. All rights reserved.</div></div>
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>
