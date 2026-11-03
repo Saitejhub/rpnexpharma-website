@@ -1,74 +1,54 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".nav");
+  // Automatically update copyright year
+  document.querySelectorAll(".year").forEach(function (element) {
+    element.textContent = new Date().getFullYear();
+  });
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute(
-        "aria-label",
-        open ? "Close navigation" : "Open navigation"
+  // Mobile navigation
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".main-nav");
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", function () {
+      navigation.classList.toggle("open");
+      menuButton.setAttribute(
+        "aria-expanded",
+        navigation.classList.contains("open") ? "true" : "false"
       );
-    });
-
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
     });
   }
 
-  const year = document.getElementById("currentYear");
-  if (year) year.textContent = new Date().getFullYear();
+  // Contact form: prepares an email for the user to review and send.
+  const contactForm = document.getElementById("contactForm");
 
-  document.querySelectorAll("[data-image-fallback]").forEach(function (img) {
-    img.addEventListener("error", function () {
-      const fallback = document.getElementById(img.dataset.imageFallback);
-      img.style.display = "none";
-      if (fallback) fallback.style.display = "flex";
-    });
-
-    if (img.complete && img.naturalWidth === 0) {
-      img.dispatchEvent(new Event("error"));
-    }
-  });
-
-  const form = document.getElementById("contactForm");
-
-  if (form) {
-    form.addEventListener("submit", function (event) {
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      if (!form.reportValidity()) return;
+      // Replace this with RP Nexpharma's confirmed business email.
+      const recipient = "YOUR-COMPANY-EMAIL@example.com";
 
-      // Replace with the verified RP Nexpharma email address.
-      const companyEmail = "YOUR-COMPANY-EMAIL@example.com";
-      const note = document.getElementById("formNote");
+      const formData = new FormData(contactForm);
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const company = formData.get("company");
+      const subject = formData.get("subject");
+      const message = formData.get("message");
 
-      if (companyEmail === "YOUR-COMPANY-EMAIL@example.com") {
-        note.textContent =
-          "Please replace the example email address in script.js before using this form.";
-        note.style.color = "#a33b28";
-        return;
-      }
-
-      const data = new FormData(form);
-      const subject = encodeURIComponent(
-        "Website enquiry: " + data.get("subject")
-      );
-      const body = encodeURIComponent(
-        "Name: " + data.get("name") + "\n" +
-        "Email: " + data.get("email") + "\n" +
-        "Enquiry type: " + data.get("subject") + "\n\n" +
-        "Message:\n" + data.get("message")
+      const emailSubject = encodeURIComponent("Website enquiry: " + subject);
+      const emailBody = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Business email: " + email + "\n" +
+        "Company: " + company + "\n" +
+        "Enquiry type: " + subject + "\n\n" +
+        "Message:\n" + message
       );
 
       window.location.href =
-        "mailto:" + companyEmail +
-        "?subject=" + subject + "&body=" + body;
+        "mailto:" + recipient +
+        "?subject=" + emailSubject +
+        "&body=" + emailBody;
     });
   }
 });
