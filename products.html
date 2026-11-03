@@ -1,21 +1,29 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | RP Nexpharma</title>
+  <meta name="description" content="Explore RP Nexpharma's pharmaceutical therapeutic portfolio areas and tablet manufacturing focus.">
+  <title>Products & Therapeutic Areas | RP Nexpharma</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html"><img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo"></a>
+    <a class="brand" href="index.html">
+      <img src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma logo">
+    </a>
+
     <button class="menu-toggle" aria-label="Open navigation">☰</button>
+
     <nav class="main-nav">
-      <a href="index.html">Home</a><a href="about.html">About Us</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
       <a class="active" href="products.html">Products</a>
       <a href="manufacturing-quality.html">Manufacturing & Quality</a>
       <a href="group-companies.html">Our Group</a>
@@ -25,67 +33,321 @@
 </header>
 
 <main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow light">OUR PRODUCT FOCUS</span>
-      <h1>Developing our pharmaceutical product portfolio</h1>
-      <p>Our current in-house manufacturing focus is on tablet dosage forms.</p>
+
+  <!-- PRODUCT HERO WITH FILTER -->
+  <section class="products-hero">
+    <div class="products-hero-overlay"></div>
+
+    <div class="container products-hero-content">
+      <span class="eyebrow light">OUR PHARMACEUTICAL PORTFOLIO</span>
+
+      <h1>Explore Our Therapeutic Areas</h1>
+
+      <p>
+        Discover the therapeutic areas that guide RP Nexpharma's
+        pharmaceutical portfolio development, with tablets as our
+        current in-house dosage-form focus.
+      </p>
+
+      <!-- PRODUCT FILTER -->
+      <div class="hero-filter">
+
+        <div class="filter-heading">
+          <span>Find a therapeutic area</span>
+          <small>Search or select a category</small>
+        </div>
+
+        <div class="filter-controls">
+
+          <div class="filter-search">
+            <span>⌕</span>
+            <input
+              type="search"
+              id="productSearch"
+              placeholder="Search therapeutic areas..."
+              aria-label="Search therapeutic areas"
+            >
+          </div>
+
+          <div class="filter-select">
+            <select id="categoryFilter" aria-label="Filter by therapeutic area">
+              <option value="all">All therapeutic areas</option>
+              <option value="diabetes">Diabetes</option>
+              <option value="cardiovascular">Cardiovascular</option>
+              <option value="respiratory">Respiratory</option>
+              <option value="autoimmune">Autoimmune</option>
+              <option value="mental-health">Mental Health</option>
+            </select>
+          </div>
+
+          <button type="button" id="resetFilters" class="filter-reset">
+            Reset
+          </button>
+
+        </div>
+
+        <div class="filter-quick-links">
+          <button class="filter-chip active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="diabetes">Diabetes</button>
+          <button class="filter-chip" data-filter="cardiovascular">Cardiovascular</button>
+          <button class="filter-chip" data-filter="respiratory">Respiratory</button>
+          <button class="filter-chip" data-filter="autoimmune">Autoimmune</button>
+          <button class="filter-chip" data-filter="mental-health">Mental Health</button>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- INTRODUCTION -->
+  <section class="section products-intro">
     <div class="container">
       <div class="section-heading">
-        <span class="eyebrow">DOSAGE FORM</span>
-        <h2>Tablet manufacturing</h2>
+        <span class="eyebrow">OUR AREAS OF FOCUS</span>
+        <h2>Focused on pharmaceutical development</h2>
         <p>
-          RP Nexpharma is developing its own medicine manufacturing activities,
-          with tablets as its current in-house dosage-form focus.
+          RP Nexpharma is developing its own medicine manufacturing
+          activities. Our current in-house dosage-form focus is tablets,
+          across the therapeutic areas outlined below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATEGORY CARDS -->
+  <section class="section product-list-section">
+    <div class="container">
+
+      <div class="product-results-heading">
+        <div>
+          <span class="eyebrow">THERAPEUTIC PORTFOLIO</span>
+          <h2>Explore Our Portfolio Areas</h2>
+        </div>
+
+        <p id="resultsCount" aria-live="polite">
+          Showing 5 portfolio areas
         </p>
       </div>
 
-      <div class="product-feature">
-        <div class="product-visual">
-          <img src="assets/images/pharmaceutical-workers-collage.png"
-               alt="Pharmaceutical manufacturing professionals">
-        </div>
-        <div class="product-copy">
-          <span class="eyebrow">CURRENT MANUFACTURING FOCUS</span>
-          <h2>Tablets</h2>
-          <p>
-            Tablet dosage forms are the current focus of our in-house
-            manufacturing direction. We aim to develop the processes and
-            capabilities needed to support responsible pharmaceutical production.
-          </p>
-          <p>
-            Product-specific information, including composition, strength,
-            pack size and availability, will be published once formally
-            confirmed and approved for communication.
-          </p>
-          <a class="btn btn-primary" href="contact.html">Product Enquiries</a>
-        </div>
+      <div class="product-category-grid" id="productGrid">
+
+        <!-- DIABETES -->
+        <article class="portfolio-card" data-category="diabetes">
+          <div class="portfolio-image diabetes-image">
+            <span class="portfolio-icon">01</span>
+            <span class="portfolio-tag">Therapeutic Area</span>
+          </div>
+
+          <div class="portfolio-content">
+            <span class="portfolio-category">ENDOCRINE HEALTH</span>
+            <h3>Diabetes</h3>
+            <p>
+              A portfolio development area focused on medicines
+              associated with diabetes management and metabolic health.
+            </p>
+
+            <div class="portfolio-details">
+              <span>Dosage-form focus</span>
+              <strong>Tablets</strong>
+            </div>
+
+            <a href="contact.html" class="portfolio-link">
+              Product Enquiry <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARDIOVASCULAR -->
+        <article class="portfolio-card" data-category="cardiovascular">
+          <div class="portfolio-image cardiovascular-image">
+            <span class="portfolio-icon">02</span>
+            <span class="portfolio-tag">Therapeutic Area</span>
+          </div>
+
+          <div class="portfolio-content">
+            <span class="portfolio-category">CARDIAC HEALTH</span>
+            <h3>Cardiovascular Diseases</h3>
+            <p>
+              A portfolio development area relating to cardiovascular
+              health and conditions affecting the heart and circulation.
+            </p>
+
+            <div class="portfolio-details">
+              <span>Dosage-form focus</span>
+              <strong>Tablets</strong>
+            </div>
+
+            <a href="contact.html" class="portfolio-link">
+              Product Enquiry <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- RESPIRATORY -->
+        <article class="portfolio-card" data-category="respiratory">
+          <div class="portfolio-image respiratory-image">
+            <span class="portfolio-icon">03</span>
+            <span class="portfolio-tag">Therapeutic Area</span>
+          </div>
+
+          <div class="portfolio-content">
+            <span class="portfolio-category">RESPIRATORY HEALTH</span>
+            <h3>Respiratory Illnesses</h3>
+            <p>
+              A portfolio development area covering respiratory health
+              and conditions affecting the respiratory system.
+            </p>
+
+            <div class="portfolio-details">
+              <span>Dosage-form focus</span>
+              <strong>Tablets</strong>
+            </div>
+
+            <a href="contact.html" class="portfolio-link">
+              Product Enquiry <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AUTOIMMUNE -->
+        <article class="portfolio-card" data-category="autoimmune">
+          <div class="portfolio-image autoimmune-image">
+            <span class="portfolio-icon">04</span>
+            <span class="portfolio-tag">Therapeutic Area</span>
+          </div>
+
+          <div class="portfolio-content">
+            <span class="portfolio-category">IMMUNE HEALTH</span>
+            <h3>Autoimmune Diseases</h3>
+            <p>
+              A portfolio development area relating to autoimmune
+              conditions and immune-system health.
+            </p>
+
+            <div class="portfolio-details">
+              <span>Dosage-form focus</span>
+              <strong>Tablets</strong>
+            </div>
+
+            <a href="contact.html" class="portfolio-link">
+              Product Enquiry <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- MENTAL HEALTH -->
+        <article class="portfolio-card" data-category="mental-health">
+          <div class="portfolio-image mental-image">
+            <span class="portfolio-icon">05</span>
+            <span class="portfolio-tag">Therapeutic Area</span>
+          </div>
+
+          <div class="portfolio-content">
+            <span class="portfolio-category">MENTAL WELLBEING</span>
+            <h3>Mental Health Conditions</h3>
+            <p>
+              A portfolio development area relating to mental health
+              and conditions affecting psychological wellbeing.
+            </p>
+
+            <div class="portfolio-details">
+              <span>Dosage-form focus</span>
+              <strong>Tablets</strong>
+            </div>
+
+            <a href="contact.html" class="portfolio-link">
+              Product Enquiry <span>→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="no-products" id="noProducts" hidden>
+        <h3>No matching categories found</h3>
+        <p>Try another search term or reset the filters.</p>
+        <button type="button" class="btn btn-primary" id="emptyReset">
+          Show All Categories
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCT INFORMATION NOTICE -->
+  <section class="section soft-bg">
+    <div class="container product-notice">
+      <div>
+        <span class="eyebrow">PRODUCT INFORMATION</span>
+        <h2>Our portfolio is under development</h2>
+        <p>
+          The categories displayed represent therapeutic portfolio areas,
+          not a list of confirmed or currently marketed medicines.
+          Individual medicine names, compositions, strengths, pack sizes
+          and availability will be published after confirmation.
+        </p>
+      </div>
+
+      <div class="notice-side">
+        <span class="notice-number">05</span>
+        <span>Therapeutic portfolio areas</span>
       </div>
     </div>
   </section>
 
-  <section class="section soft-bg">
-    <div class="container closing-cta">
+  <!-- CTA -->
+  <section class="section closing-cta">
+    <div class="container">
       <span class="eyebrow">BUSINESS ENQUIRIES</span>
-      <h2>Discuss product and partnership opportunities</h2>
-      <p>Contact RP Nexpharma for further information about its manufacturing focus.</p>
+      <h2>Interested in working with RP Nexpharma?</h2>
+      <p>
+        Contact our team to discuss pharmaceutical manufacturing
+        and potential business opportunities.
+      </p>
       <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><img class="footer-logo" src="assets/images/rpnexpharma-logo.jpg" alt="RP Nexpharma"><p>Focused on pharmaceutical manufacturing.</p></div>
-    <div><h4>Explore</h4><a href="about.html">About Us</a><a href="manufacturing-quality.html">Manufacturing & Quality</a></div>
-    <div><h4>Connect</h4><a href="group-companies.html">Our Group</a><a href="contact.html">Contact Us</a></div>
+
+    <div>
+      <img class="footer-logo"
+           src="assets/images/rpnexpharma-logo.jpg"
+           alt="RP Nexpharma">
+      <p>
+        Pharmaceutical manufacturing with an international outlook.
+      </p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="manufacturing-quality.html">Manufacturing & Quality</a>
+    </div>
+
+    <div>
+      <h4>Our Group</h4>
+      <a href="group-companies.html">Group Companies</a>
+      <a href="https://vvtechnologiesinc.com/" target="_blank" rel="noopener">
+        VV Technologies
+      </a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
   </div>
-  <div class="footer-bottom"><div class="container">© <span class="year"></span> RP Nexpharma. All rights reserved.</div></div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      © <span class="year"></span> RP Nexpharma. All rights reserved.
+    </div>
+  </div>
 </footer>
+
 <script src="js/script.js"></script>
+
 </body>
 </html>
